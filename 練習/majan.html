@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset"utf-8">
+  <title></title>
+<link rel="stylesheet" href="style.css">
+<SCRIPT language="JavaScript">
+   function Add(){
+    var arr = [];
+    var a1 = document.fm0.fm1.value;
+    var a2 = document.fm0.fm2.value;
+    var a3 = document.fm0.fm3.value;
+    var a4 = document.fm0.fm4.value;
+
+
+     arr.push(Number(a1));
+     arr.push(Number(a2));
+     arr.push(Number(a3));
+     arr.push(Number(a4));
+    var sorted = arr.slice().sort(function(a, b){return b - a});
+    var ranks = arr.slice().map(function(x){return sorted.indexOf(x) + 1});
+    for(let i = 0; i < ranks.length; i++){
+    if(ranks[i] == 1){
+    　arr.splice(i,1,Math.floor(arr[i]+20000));
+    }};
+
+    if(document.uma.uma1.value == "5-10"){
+      for(let i = 0; i < ranks.length; i++){
+        if(ranks[i] == 1){
+          arr.splice(i,1,arr[i]+10000)
+        }else if(ranks[i] == 2){
+          arr.splice(i,1,arr[i]+5000)
+        }else if(ranks[i] == 3){
+          arr.splice(i,1,arr[i]-5000)
+        }else if(ranks[i] == 4){
+          arr.splice(i,1,arr[i]-10000)
+        }
+    };
+
+    
+    document.result.r1.value = Math.ceil(arr[0]/1000)-30
+    document.result.r2.value = Math.ceil(arr[1]/1000)-30
+    document.result.r3.value = Math.ceil(arr[2]/1000)-30
+    document.result.r4.value = Math.ceil(arr[3]/1000)-30
+         console.log(arr);
+    }else if(document.uma.uma1.value == "10-20"){
+      for(let i = 0; i < ranks.length; i++){
+        if(ranks[i] == 1){
+          arr.splice(i,1,arr[i]+20000)
+        }else if(ranks[i] == 2){
+          arr.splice(i,1,arr[i]+10000)
+        }else if(ranks[i] == 3){
+          arr.splice(i,1,arr[i]-10000)
+        }else if(ranks[i] == 4){
+          arr.splice(i,1,arr[i]-20000)
+        }
+    };
+
+    
+    document.result.r1.value = Math.ceil(arr[0]/1000)-30
+    document.result.r2.value = Math.ceil(arr[1]/1000)-30
+    document.result.r3.value = Math.ceil(arr[2]/1000)-30
+    document.result.r4.value = Math.ceil(arr[3]/1000)-30
+    }else if(document.uma.uma1.value == "10-30"){
+      for(let i = 0; i < ranks.length; i++){
+        if(ranks[i] == 1){
+          arr.splice(i,1,arr[i]+30000)
+        }else if(ranks[i] == 2){
+          arr.splice(i,1,arr[i]+10000)
+        }else if(ranks[i] == 3){
+          arr.splice(i,1,arr[i]-10000)
+        }else if(ranks[i] == 4){
+          arr.splice(i,1,arr[i]-30000)
+        }
+    };
+
+    
+    document.result.r1.value = Math.ceil(arr[0]/1000)-30
+    document.result.r2.value = Math.ceil(arr[1]/1000)-30
+    document.result.r3.value = Math.ceil(arr[2]/1000)-30
+    document.result.r4.value = Math.ceil(arr[3]/1000)-30
+         console.log(arr);
+    }else if(document.uma.uma1.value == "20-30"){
+      for(let i = 0; i < ranks.length; i++){
+        if(ranks[i] == 1){
+          arr.splice(i,1,arr[i]+30000)
+        }else if(ranks[i] == 2){
+          arr.splice(i,1,arr[i]+20000)
+        }else if(ranks[i] == 3){
+          arr.splice(i,1,arr[i]-20000)
+        }else if(ranks[i] == 4){
+          arr.splice(i,1,arr[i]-30000)
+        }
+    };
+
+    
+    document.result.r1.value = Math.ceil(arr[0]/1000)-30
+    document.result.r2.value = Math.ceil(arr[1]/1000)-30
+    document.result.r3.value = Math.ceil(arr[2]/1000)-30
+    document.result.r4.value = Math.ceil(arr[3]/1000)-30
+         console.log(arr);
+    }else if(document.uma.uma1.value == "0"){    
+    document.result.r1.value = Math.ceil(arr[0]/1000)-30
+    document.result.r2.value = Math.ceil(arr[1]/1000)-30
+    document.result.r3.value = Math.ceil(arr[2]/1000)-30
+    document.result.r4.value = Math.ceil(arr[3]/1000)-30
+         console.log(arr);
+    }
+    } ;
+
+    </SCRIPT>
+</head>
+<body>
+        
+
+  ウマ
+  <form name="uma" id ="uma">
+    <input type="radio" value="5-10" name="uma1">5-10
+    <input type="radio" value="10-20" name="uma1">10-20
+    <input type="radio" value="10-30" name="uma1">10-30
+    <input type="radio" value="20-30" name="uma1">20-30  
+    <input type="radio" value="0" name="uma1">ウマなし  
+  </form>
+    <FORM name="fm0" id="fm0">
+      P1<INPUT id="fm1" size="20" type="text" name="fm1" value="23000">
+      P2<INPUT id="fm2" size="20" type="text" name="name2" value="30000">
+      P3<INPUT id="fm3" size="20" type="text" name="name3" value="20000" >
+      P4<INPUT id="fm4" size="20" type="text" name="name4" value="27000">
+        <INPUT type="button" value="=" onclick="Add()">
+    </FORM>
+
+    結果
+    <FORM name="result">
+        P1<INPUT size="20" type="text" ID="r1">
+        P2<INPUT size="20" type="text" name="r2">
+        P3<INPUT size="20" type="text" name="r3">
+        P4<INPUT size="20" type="text" name="r4">
+    </FORM>
+  
+</div>
+</body>
+</html>
