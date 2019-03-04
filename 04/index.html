@@ -13,8 +13,8 @@
         <input type="text" v-model="addText" placeholder="ToDoを入力">
         <button v-on:click="addToDo()">追加</button>
         <button v-on:click="del">削除</button>
-        <ul v-for="todo in list">
-            <li>{{ todo.text }}
+        <ul v-for="(todo,num) in list">
+            <li>{{ num + 1 }}.{{ todo.text }}
             <button v-on:click="del1(todo)">削除</button>
             </li>
            

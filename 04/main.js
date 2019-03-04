@@ -3,6 +3,7 @@ const vm = new Vue({
     data: {
       addText: '',
       list:[],
+      num : 1,
   },
   methods: {
       addToDo() {
