@@ -16,8 +16,8 @@ const vm = new Vue({
       del(){
         this.list = [];
       },
-      del1(){
-         var index = this.list.indexOf();
+      del1(todo){
+         var index = this.list.indexOf(todo);
          console.log(index);
          this.list.splice(index,1); 
       },
