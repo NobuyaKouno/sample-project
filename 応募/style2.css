@@ -1,0 +1,25 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.container{
+    max-width:100%;
+    margin:0,10px;
+}
+
+header{
+    position: relative;
+    top:0;
+    left:0;
+    height:100px;
+}
+
+.top{
+ height:700px;
+ width:100%;
+ background-image:url("img/jin_top.jpg"); 
+ background-size:cover;
+ font-size:3em;
+ color:white;
+}
