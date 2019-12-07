@@ -2,25 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://unpkg.com/nes.css@2.2.0/css/nes.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.4.9/dialog-polyfill.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dialog-polyfill/0.5.0/dialog-polyfill.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="welcome.js"></script>
-    <link href="welcome.css" rel="stylesheet" type="text/css" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="welcome.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
-<body>
-
-<div>ああああああああ</div>
-
-<div id = "wrap" class="balloon1-top">
-    <div id="a">いらっしゃいませ！当店のサイトへようこそ！
-            これから説明をさせていただきますのでよろしくお願いします。
+<body class="nes-container is-dark">
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2"><img class="top_img nes-container is-rounded is-dark" src="./img/531521.jpg"></div>
+        <div class="col-sm-7">
+            <div id="otoiawase">
+                    <h1 class="contact-title">お問い合わせ 内容入力</h1>
+                    <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+                    <div>
+                        <div>
+                            <label>おなまえ</label>
+                            <input type="text" name="name" placeholder="例）山田太郎" value="">
+                        </div>
+                        <div>
+                            <label>ふりがな</label>
+                            <input type="text" name="furigana" placeholder="例）やまだたろう" value="">
+                        </div>
+                        <div>
+                            <label>メールアドレス</label>
+                            <input type="text" name="email" placeholder="例）guest@example.com" value="">
+                        </div>
+                        <div>
+                            <label>でんわ</label>
+                            <input type="text" name="tel" placeholder="例）0000000000" value="">
+                        </div>
+                        <div>
+                            <label>性別</label>
+                            <input type="radio" name="sex" value="男性" checked> 男性
+                            <input type="radio" name="sex" value="女性"> 女性
+                        </div>
+                        <div>
+                            <label>お問い合わせ項目</label>
+                            <select name="item">
+                                <option value="">お問い合わせ項目を選択してください</option>
+                                <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+                                <option value="ご意見・ご感想">ご意見・ご感想</option>
+                            </select>
+                        </div>
+                        <div id="naiyou">
+                            <label>お問い合わせ内容</label>
+                            <textarea name="content" rows="5" placeholder="お問合せ内容を入力"></textarea>
+                        </div>
+                    </div>
+                    <button class="nes-btn" type="submit">そうしん</button>
+        
+        </div>    
+        </div>
+        <div id = "command" class="col-sm-2  nes-container is-rounded is-dark">
+            <div id="load">
+                <p class="oishi">おいしい</p>
+                <p class="otoiawase">おといあわせ</p>
+                <p class="basyo">ばしょ</p></div>
+            </div>
+            
+</div>
+<div class="kaiwa">
+<div id = "wrap" class="balloon1-top nes-container is-rounded is-dark">
+    <div class="kaiwa2">
+    <p id="b">いらっしゃいませ！当店のサイトへようこそ！</p>
+    <p id="c">右側にメニューが表示されますので、見たいページをクリックしてください。</p>
     </div>
 </div>   
-
-<div >
-    <button class="yoke">botan</button> <button class="yoke2">botan2</button>
 </div>
+
+<!-- <div >
+    <button class="yoke nes-btn">botan</button> <button class="yoke2">botan2</button>
+</div> -->
 </body>
 </html>

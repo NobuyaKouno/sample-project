@@ -1,5 +1,5 @@
 
-        var id = ['a']; //指定するidを全て配列で渡す
+        var id = ['b','c']; //指定するidを全て配列で渡す
         var tx = [];
         var txCount = [];
         var txSp = 100; // テキストの表示速度
@@ -8,12 +8,17 @@
         var btncount = 0;
 
         window.onload = function(){
-        kamikakushi();
-        countSet();
+        $.when(
+        kamikakushi(),
+        countSet(),
         itimozi()
+        ).done(
+            setTimeout(function cmdopen(){console.log("nuooo"),
+            $('#command').css('display','block')
+            },7000)        );
         }
         function reset(){
-            id = ['a']; //指定するidを全て配列で渡す
+            id = ['b','c']; //指定するidを全て配列で渡す
             tx = [];
             txCount = [];
             txSp = 100; // テキストの表示速度

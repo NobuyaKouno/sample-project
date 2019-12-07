@@ -1,16 +1,29 @@
+@font-face {
+  font-family: 'PixelMplus10';
+  src: url('PixelMplus10-Regular.eot'); /* IE9 Compat Modes */
+	src: url('PixelMplus10-Regular.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
+	     url('PixelMplus10-Regular.woff') format('woff'), /* woff - Modern Browsers */
+       url("PixelMplus10-Regular.ttf") format('truetype');
+
+}
+
+body{
+  font-family: 'PixelMplus10';
+}
+
 .balloon1-top {
     position: relative;
     display: inline-block;
     margin: 1.5em 0;
     padding: 7px 10px;
     min-width: 120px;
-    width:300px;
+    width:90%;
     color: #555;
     font-size: 16px;
     background: #e0edff;
   }
   
-  .balloon1-top:before {
+  /* .balloon1-top:before {
     content: "";
     position: absolute;
     top: -30px;
@@ -18,9 +31,48 @@
     margin-left: -15px;
     border: 15px solid transparent;
     border-bottom: 15px solid #e0edff;
-  }
+  } */
   
   .balloon1-top p {
     margin: 0;
     padding: 0;
+  }
+
+  .top_img{
+    width:40%;
+  }
+
+  /* #command{
+    position: absolute;
+    left:75vw;
+    top:10%;
+    width:200px
+  } */
+
+  .container{
+    margin-left:0;
+    margin-right:0;
+  }
+
+  #a{
+    margin:auto;
+  }
+
+  #warp{
+    width:90%;
+  }
+
+  .kaiwa{
+    text-align: center;
+  }
+  .kaiwa2{
+    text-align: left;
+  }
+  #command{
+    display:none;
+  }
+
+  label{
+    width:25%;
+
   }
